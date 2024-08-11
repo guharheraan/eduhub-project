@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap'); 
+/* protest riot */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Protest+Riot&display=swap');
+/* caveat */
+
+/* bg-color #FDF5DF    hedding-color #5EBEC4       buttons-color #F92C85 */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: Caveat;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+:root{
+    --heading-color:#5EBEC4;
+    --bg-color:#FDF5DF;
+    --btn-color:#F92C85;
+}
+/* ----------------------------------  sudo classes start ------------------------------------- */
+.heading{
+    font-size: 5rem;
+    text-transform: capitalize;
+    color: var(--heading-color);
+}
+.heading2{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: var(--heading-color);
+    margin: .5rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--btn-color);
+    margin: .5rem 0;
+}
+.btn{
+    background-color: var(--btn-color);
+    color: #ddd;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    text-align: center;
+    font-family: protest_riot;
+}
+
+.btn:hover{
+    color: var(--btn-color);
+    background-color: transparent;
+    border: 2px solid var(--btn-color);
+}
+
+p{
+    font-size: 1rem;
+    color: #646464;
+    margin: 0.5rem 0;
+}
+
+/* ----------------------------------  sudo classes end ------------------------------------- */
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+
+/* -------------------------------------home secton css start-----------------------------------  */
+#home{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('./bf-img.jpg');
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.content h1{
+    font-family: protest_riot;
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px var(--heading-color);
+    color: transparent;
+}
+.content p{
+    color: #ddd;
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px){
+    #home{
+        height: 50vh;
+    }
+}
+
+/* -------------------------------------home secton css end-----------------------------------  */
+/*------------------------ navbar css start --------------------------*/
+
+nav{
+    background-color: #fff;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    z-index: 10000;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .2s;
+}
+.fa-bars{
+    font-size: 1.5rem;
+    color: var(--btn-color);
+    cursor: pointer;
+    display: none;
+}
+
+nav .fa-times{
+    transform: rotate(180deg);
+    color: var(--heading-color);
+    transition: .2s;
+
+
+}
+nav>div{
+    display: flex;
+    align-items: center;
+}
+nav>div a, nav>div h1{
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+nav>div a{
+    color: var(--btn-color);
+    margin: 0 10px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 10px;
+    color: var(--btn-color);
+    font-weight: bold;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid var(--btn-color);
+    color: var(--heading-color);
+}
+nav ul:last-child{
+    margin-right: 10px;
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 55%;
+    }
+    .fa-bars{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: -100rem; 
+        left: 0;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+    nav ul li{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 2rem;
+        display: block;
+    }
+    nav ul li a:hover{
+        border-bottom:none;
+    }
+    nav .nav-toggle{
+        top: 2.3rem;
+        opacity: 1;
+    }
+}
+
+/* ------------------------navbar css end --------------------------*/
+
+/* ------------------------------------card section css start--------------------------------  */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.card{
+    background-color: #fff;
+    text-align: center;
+    width: 12rem;
+    height: 11rem;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.2);
+}
+.card>i{
+    font-size: 2rem;
+    color: var(--heading-color);
+}
+.card>i:hover{
+    color: var(--btn-color);
+}
+
+@media (max-width:768px) {
+    .cards{
+        margin-top: 4rem;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    } 
+}
+
+/* ------------------------------------card section css end--------------------------------  */
+
+
+
+/* ------------------------------------about section css start--------------------------------  */
+#about{
+    text-align: center;
+    margin-top: 7rem;
+}
+#about h2{
+    color: var(--heading-color);
+}
+#about>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+}
+
+#about .aboutgrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+#about .content{
+    width: 40rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+#about .aboutgrid h2{
+    color: var(--heading-color);
+    font-size: 2.3rem;
+}
+#about .aboutgrid h2, #about .aboutgrid p{
+    text-align: left;
+}
+#about .aboutgrid p{
+    font-size: 1.5rem;
+    color:#36454F ;
+}
+#about .aboutgrid img{
+    width: 50rem;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #fff;
+    border-radius: 10px;
+}
+
+@media (max-width:768px){
+    #about{
+        margin-top: 2rem;
+    }
+}
+
+/* ------------------------------------about section css end--------------------------------  */
+
+/*------------------------------------ teachers section css start---------------------------------  */
+#teachers{
+    text-align: center;
+    margin-top: 2rem;
+}
+#teachers>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#teachers .teachersflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.teachers-card{
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+
+}
+.teachers-card>img{
+    width: 100%;
+    height: 23rem;
+    object-fit: cover;
+    filter: grayscale();
+}
+
+.teachers-card>img:hover{
+    filter: grayscale(0);
+}
+
+.teachers-card .icons i{
+    font-size: 1.3rem;
+    padding: .8rem .4rem;
+    color: var(--heading-color);
+}
+.teachers-card .icons i:hover{
+    color: var(--btn-color);
+}
+
+/*------------------------------------ teachers section css end---------------------------------  */
+
+/* -------------------------------------courses section css start------------------------------- */
+#Courses{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#Courses>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.c-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 4rem auto;
+}
+
+.course{
+    background-color: #fff;
+    text-align: center;
+    width: 20rem;
+    height: 15rem;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 4px 5px var(--btn-color);
+}
+.course>i{
+    font-size: 4rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    color: var(--heading-color);
+    background: #fff;
+    margin-top: -3rem;
+    text-align: center;
+}
+.course:hover, .course:hover>i{
+    color: var(--btn-color);
+}
+
+/* -------------------------------------courses section css end------------------------------- */
+
+/* ---------------------------------------review section css start------------------------------ */
+
+#review{
+    text-align: center;
+    margin-top: 2rem;
+}
+#review>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.r-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+
+}
+
+.review-card{
+    width: 20rem;
+    height: 15rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 5px var(--heading-color),
+                2px 4px 5px rgba(0,0,0,.3);
+}
+.review-card>img{
+    margin: 1rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review-card .stars{
+    color: #FFDF00;
+}
+/* ---------------------------------------review section css end------------------------------ */
+
+/* ---------------------------------------contact section css start--------------------------- */
+
+#contact{
+    text-align: center;
+    margin-top: 2rem;
+    background: #36454F;
+}
+
+#contact>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.contact-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.contact-wrapper>img{
+    max-width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    object-position: center;
+}
+.contact-form{
+    width: 50rem;
+    padding: 1rem;
+}
+.contact-form>input,textarea{
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: .8rem;
+    margin: 1rem 0;
+    background: #fff;
+    color: var(--btn-color);
+}
+
+
+/* ---------------------------------------contact section css start--------------------------- */
+
+/* --------------------------------------------footer section css start---------------------------- */
+.footer{
+    text-align: center;
+}
+
+.footer .footer-icons{
+    color: var(--heading-color);
+    font-size: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--btn-color);
+}
+.footer .footer-icons i:hover{
+    color: var(--btn-color);
+}
+
+.footer>p{
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+
+@media (max-width:440px){
+    html{
+        font-size: 50%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media (max-width:355px){
+    body{
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 45%;
+    }
+}
+
+
+
+
+/* --------------------------------------------footer section css start---------------------------- */
